@@ -91,11 +91,11 @@ const Header = ({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobileOpen }) 
         >
           <img 
             className="header-avatar" 
-            src={user?.avatar || 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'} 
+            src={user?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'} 
             alt={user?.name || 'User Profile'} 
           />
           <div className="header-user-info" style={{ display: 'none', sm: 'flex' }}>
-            <span className="header-username">{user?.name || 'Jane Doe'}</span>
+            <span className="header-username">{user?.name || 'Prabhav Rathi'}</span>
             <span className="header-role">{user?.role || 'Administrator'}</span>
           </div>
           <ChevronDown size={14} color="var(--neutral-400)" />
@@ -113,7 +113,7 @@ const Header = ({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobileOpen }) 
                 className="mobile-profile-details"
               >
                 <span style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--neutral-800)' }}>
-                  {user?.name || 'Jane Doe'}
+                  {user?.name || 'Prabhav Rathi'}
                 </span>
                 <span style={{ fontSize: '0.75rem', color: 'var(--neutral-400)' }}>
                   {user?.email || 'admin@urbanharvest.com'}

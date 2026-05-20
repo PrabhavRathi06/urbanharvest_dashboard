@@ -9,16 +9,31 @@
 
 ---
 
-## 📸 Screenshots
+## 📸 Project Showcase & Screenshots
 
-### 1. Dashboard Overview
-![Dashboard Screen](assets/images/dashboard_screenshot.png)
+### 1. Administrative Login Page
+Clean, modern split-screen layout with form validation, test credentials helper, and remember-me functionality.
+![Login Page](assets/images/login_page.png)
 
-### 2. Login Page
-![Login Screen](assets/images/login_screenshot.png)
+### 2. Analytics Overview Dashboard
+Interactive panels featuring live order stats, revenue aggregations, recent orders list, inventory composition status, and low stock alerts feed.
+![Dashboard Page](assets/images/dashboard_page.png)
 
-### 3. Product Inventory Management
-![Products Screen](assets/images/products_screenshot.png)
+### 3. Product Inventory Management (Desktop)
+Search bar, filter by category pills, stock/availability status control switches, and action triggers.
+![Product Management Page](assets/images/product_management_page.png)
+
+### 4. Create Product Inline Form
+A collapsible inline form panel to seamlessly add new inventory items with input validation.
+![Add Product Form](assets/images/add_product_form.png)
+
+### 5. Mobile Responsive View (Product Page)
+Compact, mobile-optimized card styling and filters that fit perfectly on narrow screen sizes.
+![Product Management Page Mobile](assets/images/product_management_page_mobile.png)
+
+### 6. Mobile Side Menu Drawer
+Clean mobile navigation menu drawer that transitions smoothly from offscreen.
+![Mobile Navigation Sidebar](assets/images/mobile_navigation_sidebar.png)
 
 ---
 
