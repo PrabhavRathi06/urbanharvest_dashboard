@@ -1,0 +1,5 @@
+This folder will contain screenshots of the Urban Harvest Admin Dashboard.
+Add your screenshots here with the following file names to match the README configuration:
+- login_screenshot.png (Login Screen)
+- dashboard_screenshot.png (Dashboard Screen)
+- products_screenshot.png (Product Management Screen)

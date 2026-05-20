@@ -1,97 +1,113 @@
-# Urban Harvest Admin Dashboard
+# Urban Harvest Dashboard
 
-A responsive, modern, and user-friendly administrative dashboard for **Urban Harvest**—a fictional urban agriculture and fresh organic food delivery platform. Developed as part of the UI/UX Developer Fresher assignment.
+> A responsive, modern, and user-friendly administrative dashboard for **Urban Harvest**—a fictional urban agriculture and fresh organic food delivery platform. Developed as part of the UI/UX Developer assignment.
 
-![Dashboard Preview](dashboard_preview.png)
+## Live Links
 
-## 🌟 Key Features
-
-### 1. Modern Login Page (`/login`)
-- **Visual Design**: Split-screen design featuring a green brand panel and a clean form card.
-- **Autofill Helper**: Quick credentials tooltip highlighting test values.
-- **Form Controls**: Password visibility toggle, modern form input focus shadows, and custom remember-me checkbox.
-- **Simulated Latency**: Built-in visual loaders representing asynchronous authentication processes.
-- **Error Feedback**: Red alert banner highlighting validation failures.
-
-### 2. Comprehensive Overview Dashboard (`/dashboard`)
-- **Reactive Stats Cards**:
-  - **Total Orders**: Live count of global orders.
-  - **Revenue**: Live summation of Delivered and In Transit orders.
-  - **Active Users**: Customer engagement index metrics.
-  - **Pending Deliveries**: Live count of active dispatches.
-- **Recent Customer Orders Table**:
-  - Full display of ID, Avatar, name, email, item counts, total, date, status badges.
-  - **Interactive Action Dropdown**: Transition order statuses (e.g. from *Pending* to *Delivered*) directly from the table and watch the Total Revenue and Pending Deliveries metrics update in real-time.
-- **Low Stock Feed**: Highlights items running low (stock <= 5) with a quick action button to immediately restock.
-- **Composition Graph**: Dynamic visual progress bars categorizing inventory percentages.
-
-### 3. Product Inventory Management (`/products`)
-- **Create Product Drawer**: Modal with inputs for name, category selection, price, custom packaging unit, stock, and descriptions. Validations ensure all fields are correct.
-- **Category Filter Navigation**: Horizontal scroll navigation pills to filter inventory by categories (Vegetables, Fruits, Herbs, Microgreens, Fungi).
-- **Search & Status Filters**: Search by name or description instantly, and filter by availability.
-- **Stock Management Actions**: Individual switches to toggle items between *Available* (stock set to 15) and *Out of Stock* (stock set to 0), synchronizing low stock alerts immediately on the main dashboard.
+- **Working Demo (Vercel)**: `https://urbanharvest-dashboard.vercel.app/`
+- **GitHub Repository**: `https://github.com/PrabhavRathi06/urbanharvest_dashboard`
 
 ---
 
-## 🛠️ Technology Stack
-- **Frontend Engine**: React JS (v19) via Vite
-- **State Architecture**: Redux Toolkit & React-Redux (v9)
-- **Routing Engine**: React Router DOM (v7)
-- **Design & Icons**: Lucide React
-- **Styling**: Responsive Vanilla CSS Custom Grid Layouts
+## 📸 Screenshots
+
+### 1. Dashboard Overview
+![Dashboard Screen](assets/images/dashboard_screenshot.png)
+
+### 2. Login Page
+![Login Screen](assets/images/login_screenshot.png)
+
+### 3. Product Inventory Management
+![Products Screen](assets/images/products_screenshot.png)
 
 ---
 
-## 📂 Folder Structure
+## Features
+
+- **Modern Login Experience:** Clean split-screen design with dynamic brand pane, remember-me support, password visibility toggle, and instant login authentication validation.
+- **Real-Time Overview Analytics:** Stat cards displaying Total Orders, Revenue, Active Users, and Pending Deliveries that dynamically recalculate and synchronize as orders change status.
+- **Recent Orders Management:** Responsive interactive orders table supporting live status transitions (Pending, In Transit, Delivered, Cancelled) with horizontal swipe/scroll capabilities for mobile screen sizes.
+- **Low Stock Intelligence Feed:** Highlights products running low on stock (stock <= 5) with a single-click restock option to quickly replenish items to healthy inventory levels.
+- **Inventory Composition Graph:** Live visual breakdowns of inventory percentages by categories with harmonized color-coded progress bars.
+- **Product Inventory Controls:** Search by product name or description, filter by category pills, status criteria, and easily delete items from the dashboard.
+- **Inline Collapsible Form:** Add new organic products through an elegant inline form panel right above the product grid, complete with form validation, category mapping, and pricing units.
+- **Basic Animations & Hover Micro-interactions:** Fluid scale-in and fade-in states, custom toggle switch transitions, and card lift-ups.
+
+---
+
+## Technology Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Core Framework** | React JS 19 |
+| **State Management** | Redux Toolkit & React-Redux (v9) |
+| **Routing Engine** | React Router DOM (v7) |
+| **Icons & Design** | Lucide React |
+| **Styling** | Responsive Vanilla CSS & Custom CSS Custom Grid Layouts |
+| **Build Tooling** | Vite |
+
+---
+
+## Project Structure
+
 ```text
-src/
-├── components/          # Reusable components
-│   ├── Header.jsx       # Navigation header & profile dropdown
-│   ├── Sidebar.jsx      # Navigation sidebar & responsive mobile overlay
-│   ├── StatCard.jsx     # Overview metrics card
-│   ├── Modal.jsx        # Popups container
-│   └── layout.css       # Core layout styling
-├── store/               # Redux state configuration
-│   ├── store.js         # Main store configuration
-│   ├── authSlice.js     # User authentication actions
-│   ├── productSlice.js  # Inventory actions & filtering selectors
-│   └── orderSlice.js    # Customer orders & analytics selectors
-├── pages/               # Main route views
-│   ├── LoginPage.jsx    # Login interface
-│   ├── DashboardPage.jsx# Analytical reports page
-│   ├── ProductPage.jsx  # Inventory controls page
-│   └── pages.css        # Page-level stylesheet
-├── App.jsx              # Routing rules & layout guards
-├── index.css            # Custom CSS variables, scrollbars & tokens
-└── main.jsx             # Entry mount point & provider wrappers
+urbanharvest_dashboard/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Header.jsx       # Top navigation header & profile dropdown
+│   │   ├── Sidebar.jsx      # Fixed navigation sidebar & responsive mobile overlay
+│   │   ├── StatCard.jsx     # Overview metrics card
+│   │   ├── Modal.jsx        # Popups container
+│   │   └── layout.css       # Core layout styling
+│   ├── store/               # Redux state configuration
+│   │   ├── store.js         # Main store configuration
+│   │   ├── authSlice.js     # User authentication actions & state
+│   │   ├── productSlice.js  # Inventory actions & filtering selectors
+│   │   └── orderSlice.js    # Customer orders & analytics selectors
+│   ├── pages/               # Main route views
+│   │   ├── LoginPage.jsx    # Login interface
+│   │   ├── DashboardPage.jsx# Analytical reports page
+│   │   ├── ProductPage.jsx  # Inventory controls page
+│   │   └── pages.css        # Page-level stylesheet
+│   ├── App.jsx              # Routing rules & layout guards
+│   ├── index.css            # Custom CSS variables, scrollbars & tokens
+│   └── main.jsx             # Entry mount point & provider wrappers
 ```
 
 ---
 
-## 🚀 Local Installation & Setup
+## Local Setup Instructions
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd urbanharvest_dashboard
-   ```
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-2. **Install dependencies**:
-   ```bash
-   npm install --legacy-peer-deps
-   ```
+### 1. Installation
+```bash
+# Clone the repository
+git clone https://github.com/PrabhavRathi06/urbanharvest_dashboard.git
+cd urbanharvest_dashboard
 
-3. **Launch the local development server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173/` in your browser.
+# Install required dependencies
+npm install
+```
 
-4. **Test Credentials**:
-   - **Email**: `admin@urbanharvest.com`
-   - **Password**: `admin123`
+### 2. Launch Development Server
+```bash
+# Run local dev server
+npm run dev
+```
+> **Local App URL:** `http://localhost:5173/`
 
-5. **Build for production**:
-   ```bash
-   npm run build
-   ```
+### 3. Demo Credentials
+- **Email**: `admin@urbanharvest.com`
+- **Password**: `admin123`
+
+### 4. Build for Production
+```bash
+# Compile and build bundle
+npm run build
+```
+
+---
+*Built for Urban Harvest UI/UX Freshers Evaluation.*

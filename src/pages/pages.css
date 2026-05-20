@@ -236,6 +236,7 @@
   box-shadow: var(--shadow-sm);
   padding: 24px;
   margin-bottom: 24px;
+  min-width: 0; /* Essential for flex/grid items containing scrolling children */
 }
 
 .panel-header {
@@ -255,11 +256,13 @@
 .table-container {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-md);
 }
 
 .orders-table {
   width: 100%;
+  min-width: 850px; /* Guarantees table columns won't squish at any screen size and forces horizontal scrolling when needed */
   border-collapse: collapse;
   text-align: left;
   font-size: 0.875rem;
@@ -437,16 +440,6 @@
     margin-bottom: 14px;
   }
 
-  /* Horizontal scroll for orders table */
-  .table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .orders-table {
-    min-width: 700px;
-  }
-
   /* Low stock items */
   .low-stock-item {
     padding: 10px;
@@ -465,6 +458,44 @@
   /* Category bars */
   .category-info {
     font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-panel {
+    padding: 12px;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .panel-title {
+    font-size: 1rem;
+  }
+
+  .low-stock-item {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .low-stock-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .low-stock-name {
+    font-size: 0.75rem;
+  }
+
+  .low-stock-qty {
+    font-size: 0.75rem;
+  }
+
+  .category-info {
+    font-size: 0.75rem;
   }
 }
 
